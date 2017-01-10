@@ -1,0 +1,12 @@
+{
+  "name": "api-etouches-registrant-fields",
+  "version": "1.0.0",
+  "description": "A tool that connects with eTouches API and allows you to view registrant data or export question lists.",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/C-Rodg/API-eTouches-Registrant-Fields.git",
+    "type": "git"
+  },
+  "author": "C-Rodg <rodgersbc@gmail.com>",
+  "license": "MIT"
+}
