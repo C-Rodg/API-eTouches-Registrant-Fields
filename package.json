@@ -7,6 +7,10 @@
     "url": "https://github.com/C-Rodg/API-eTouches-Registrant-Fields.git",
     "type": "git"
   },
+  "scripts": {
+    "watch" : "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors --watch",
+    "build" : "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors"
+  },
   "author": "C-Rodg <rodgersbc@gmail.com>",
   "license": "MIT",
   "dependencies": {
