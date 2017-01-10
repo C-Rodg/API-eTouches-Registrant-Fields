@@ -1,10 +1,11 @@
 import React from 'react';
 
+import NavBar from './navbar';
+
 const App = (props) => {
     return (
         <div className="app-root">
-            App Root
-            <a href="#" className="button">Test Button</a>
+           <NavBar />
         </div>
     )
 };

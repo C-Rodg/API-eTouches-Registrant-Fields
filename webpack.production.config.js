@@ -17,7 +17,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/index.tp1.html',
 			inject : 'body',
-			filename : 'index.html'
+			filename : 'index.html',
+			favicon : './src/static/favicon.ico'
 		}),
 		new ExtractTextPlugin('[name].min.css'),
 		new webpack.optimize.UglifyJsPlugin({
@@ -42,6 +43,10 @@ module.exports = {
 				loader : 'json'
 			},
 			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader'
+			},
+			{
 				test : /\.scss$/,
 				loader : ExtractTextPlugin.extract('style', 'css!postcss!sass')
 			},
@@ -50,7 +55,7 @@ module.exports = {
 				loader : 'url?limit=10000&mimetype=application/font-woff'
 			},
 			{
-				test : /\.(ttf|eot|svg|png|jpg)(\?[a-z0-9#=&.]+)?$/,
+				test : /\.(ttf|eot|svg|png|jpg|ico)(\?[a-z0-9#=&.]+)?$/,
 				loader : 'file'
 			}
 		]
