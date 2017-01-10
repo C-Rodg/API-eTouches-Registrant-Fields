@@ -17,7 +17,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'src/index.tp1.html',
 			inject : 'body',
-			filename : 'Launch.html'
+			filename : 'index.html'
 		}),
 		new ExtractTextPlugin('[name].min.css'),
 		new webpack.optimize.UglifyJsPlugin({
