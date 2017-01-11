@@ -1,0 +1,42 @@
+html, body, .app-root {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.app-root {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-body {
+    background-color: #fafafa;
+    flex: 1;
+}
+
+.config-item:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.error-alert-text {
+    position: absolute;
+    right: 10.5px;
+    top: 9.5px;
+    padding-left: 115px;
+}
+
+.field-header {
+    margin-bottom: 5px !important;
+}
+
+.registrant .column {
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.close-registrant {
+    position: absolute;
+    right: 10.5px;
+    top: 10.5px;
+}
