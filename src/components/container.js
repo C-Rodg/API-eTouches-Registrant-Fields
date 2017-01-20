@@ -4,6 +4,7 @@ import axios from 'axios';
 import Config from './config';
 import Registrant from './registrant';
 import CsvWriter from '../utilities/csvWriter';
+import standardQuestions from '../utilities/standardQuestions';
 
 const BASE_URL = 'https://www.eiseverywhere.com/api/v2/';
 
@@ -88,9 +89,14 @@ export default class Container extends React.Component {
     }
 
     createQuestionArrays(questions) {
-        return questions.map((row) => {
+        let questionList = questions.map((row) => {
             return [row.fieldname, row.name, row.page];
         });
+        questionList.push(["", "", ""], ["","",""], ["STANDARD FIELDS", "", ""]);
+        standardQuestions.forEach((q) => {
+            questionList.push([q, "", ""]);
+        });
+        return questionList;
     }    
 
     getAccessToken(account, key) {
